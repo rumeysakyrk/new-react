@@ -4,6 +4,7 @@ import Header from './components/forheader';
 
 const name="Rumeysa"
 const surname="Kayrak"
+const isLoggedIn=false
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <input id="name" />
       </label>
       <h1>
-      {`My name is ${name}, my surname is ${surname}`}
+      {isLoggedIn ? `My name is ${name}, my surname is ${surname}` : 'Giriş yapınız.'}
       </h1>
     </>
   );
