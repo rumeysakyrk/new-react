@@ -2,6 +2,7 @@
 import './App.css';
 import Header from './components/forheader';
 import User from './components/User';
+import {useState} from "react";
 
 const name="Rumeysa"
 const surname="Kayrak"
@@ -22,9 +23,29 @@ const friends=[
 ]
 
 function App() {
+  const [changeString, setChangeString]=useState("hello");
+  const [changeNumber, setChangeNumber]= useState(23);
+  const [changeArray, setChangeArray]=useState(["Betüş", "Peri"]);
+  const [changeObject, setChangeObject]=useState({title:"kayseri", zip:38038});
   return (
     <>
-    <User name1="Mustafa"  isLoggedIn1={true} age={"yirmi"} friends={friends}
+    <h2> {changeString} </h2>
+    <button onClick={() => (setChangeString("good bye")) }> Change string
+    </button>
+    <br></br>
+    <h2> {changeNumber} </h2>
+    <button onClick={()=> (setChangeNumber(32) )}> Change number</button>
+    <br></br>
+    <h2>
+      {changeArray.map((item,index)=> <div key={index}>  {item} </div> )}
+    </h2>
+    <button onClick={()=>(setChangeArray([...changeArray,"selenaa"]))} > add Array</button>
+    <br></br>
+    <h3> {changeObject.title} {changeObject.zip} </h3>
+    <button onClick={()=>(setChangeObject({...changeObject, title:"konya", zip:42042}))}> change object</button>
+
+    <hr />
+    <User name1="Mustafa" isLoggedIn1={false} age={"yirmi"} friends={friends}
     location={{title:"Konya/Meram", zip:43042}}
     />
       <Header />
@@ -38,6 +59,7 @@ function App() {
       <h1>
       {isLoggedIn ? `My name is ${name}, my surname is ${surname}` : 'Giriş yapınız.'}
       </h1>
+    
     </>
   );
 }
