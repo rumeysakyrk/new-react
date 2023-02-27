@@ -1,6 +1,7 @@
 
 import './App.css';
 import Header from './components/forheader';
+import User from './components/User';
 
 const name="Rumeysa"
 const surname="Kayrak"
@@ -9,6 +10,7 @@ const isLoggedIn=false
 function App() {
   return (
     <>
+    <User name1="Mustafa" surname1="Yılmaz" isLoggedIn1={false} />
       <Header />
       <p className="xyz">
         paragraph
