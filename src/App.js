@@ -6,16 +6,17 @@ import User from './components/User';
 const name="Rumeysa"
 const surname="Kayrak"
 const isLoggedIn=false
+const friends=["emine", "zülal", "emine"]
 
 function App() {
   return (
     <>
-    <User name1="Mustafa" surname1="Yılmaz" isLoggedIn1={false} />
+    <User name1="Mustafa" surname1="Yılmaz" isLoggedIn1={false} friends={friends}/>
       <Header />
       <p className="xyz">
         paragraph
       </p>
-      <label Htmlfor="name">
+      <label htmlFor="name">
         Name
         <input id="name" />
       </label>
