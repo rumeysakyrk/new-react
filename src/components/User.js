@@ -1,11 +1,11 @@
+import PropTypes from "prop-types"
 
-
-function User ({name1, surname1, isLoggedIn1, friends}){
+function User ({name1, surname1, isLoggedIn1, friends, age}){
 
     return (
         <>
           <h1>
-            {isLoggedIn1 ? `My boyfriend is ${name1} ${surname1}` : "giriş yasaklandı!"}
+            {isLoggedIn1 ? `My boyfriend is ${name1} ${surname1} (${age})` : "giriş yasaklandı!"}
            </h1>
            <h2>
             {
@@ -17,6 +17,14 @@ function User ({name1, surname1, isLoggedIn1, friends}){
            </h2>
         </>
     );
+}
+
+User.propType={
+    name1:PropTypes.string,
+    surname1:PropTypes.string,
+    isLoggedIn1:PropTypes.bool,
+    friends: PropTypes.array,
+    age:PropTypes.number
 }
 
 export default User;

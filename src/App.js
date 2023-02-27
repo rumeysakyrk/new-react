@@ -24,7 +24,7 @@ const friends=[
 function App() {
   return (
     <>
-    <User name1="Mustafa" surname1="Yılmaz" isLoggedIn1={false} friends={friends}/>
+    <User name1="Mustafa" surname1="Yılmaz" isLoggedIn1={true} age={20} friends={friends}/>
       <Header />
       <p className="xyz">
         paragraph
