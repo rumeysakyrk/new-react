@@ -20,7 +20,7 @@ function User ({name1, surname1, isLoggedIn1, friends, age}){
 }
 
 User.propType={
-    name1:PropTypes.string,
+    name1:PropTypes.string.isRequired,
     surname1:PropTypes.string,
     isLoggedIn1:PropTypes.bool,
     friends: PropTypes.array,
