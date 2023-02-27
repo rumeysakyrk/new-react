@@ -24,7 +24,7 @@ User.propType={
     surname1:PropTypes.string,
     isLoggedIn1:PropTypes.bool,
     friends: PropTypes.array,
-    age:PropTypes.number
+    age:PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
 }
 
 export default User;
