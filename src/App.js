@@ -24,8 +24,8 @@ const friends=[
 function App() {
   return (
     <>
-    <User name1="Mustafa" surname1="Yılmaz" isLoggedIn1={true} age={"yirmi"} friends={friends}
-    location={{title:"Konya/Meram", zip:"43042"}}
+    <User name1="Mustafa"  isLoggedIn1={true} age={"yirmi"} friends={friends}
+    location={{title:"Konya/Meram", zip:43042}}
     />
       <Header />
       <p className="xyz">

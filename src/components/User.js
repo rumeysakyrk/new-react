@@ -32,4 +32,8 @@ User.propTypes={
     location:PropTypes.shape({title: PropTypes.string , zip: PropTypes.number}).isRequired
 };
 
+User.defaultProps={
+surname1:"Yılmaz"
+}
+
 export default User;
