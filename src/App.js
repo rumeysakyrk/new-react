@@ -6,7 +6,20 @@ import User from './components/User';
 const name="Rumeysa"
 const surname="Kayrak"
 const isLoggedIn=false
-const friends=["emine", "zülal", "emine"]
+const friends=[
+  {
+    id:1,
+    fname:"emine"
+  },
+  {
+    id:2,
+    fname:"zülal"
+  },
+  {
+    id:3,
+    fname:"emine"
+  }
+]
 
 function App() {
   return (

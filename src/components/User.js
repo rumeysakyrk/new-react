@@ -9,8 +9,8 @@ function User ({name1, surname1, isLoggedIn1, friends}){
            </h1>
            <h2>
             {
-                friends.map((friend, index) => 
-                    (<div key={index}> {index} {friend} </div>)
+                friends.map((friend, id) => 
+                    (<div key={id}> {friend.id} {friend.fname} </div>)
                     // key unique bir şey olmalı, döngülerde listelerde key olmalı
                 )
             }
