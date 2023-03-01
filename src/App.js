@@ -1,9 +1,10 @@
 
 import './App.css';
-import Header from './components/forheader';
-import User from './components/User';
 import {useState} from "react";
-
+import Counter from './components/Counter';
+//import Header from './components/forheader';
+//import User from './components/User';
+/*
 const name="Rumeysa"
 const surname="Kayrak"
 const isLoggedIn=false
@@ -21,6 +22,7 @@ const friends=[
     fname:"emine"
   }
 ]
+*/
 
 function App() {
   const [changeString, setChangeString]=useState("hello");
@@ -29,6 +31,7 @@ function App() {
   const [changeObject, setChangeObject]=useState({title:"kayseri", zip:38038});
   return (
     <>
+    <Counter />
     <h2> {changeString} </h2>
     <button onClick={() => (setChangeString("good bye")) }> Change string
     </button>
@@ -45,6 +48,8 @@ function App() {
     <button onClick={()=>(setChangeObject({...changeObject, title:"konya", zip:42042}))}> change object</button>
 
     <hr />
+    {
+    /*
     <User name1="Mustafa" isLoggedIn1={false} age={"yirmi"} friends={friends}
     location={{title:"Konya/Meram", zip:43042}}
     />
@@ -59,7 +64,7 @@ function App() {
       <h1>
       {isLoggedIn ? `My name is ${name}, my surname is ${surname}` : 'Giriş yapınız.'}
       </h1>
-    
+    */}
     </>
   );
 }
