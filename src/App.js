@@ -1,6 +1,6 @@
 
 import './App.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Counter from './components/Counter';
 //import Header from './components/forheader';
 //import User from './components/User';
@@ -29,6 +29,11 @@ function App() {
   const [changeNumber, setChangeNumber]= useState(23);
   const [changeArray, setChangeArray]=useState(["Betüş", "Peri"]);
   const [changeObject, setChangeObject]=useState({title:"kayseri", zip:38038});
+
+  useEffect(()=> {
+    console.log("useeffect kullanıldı")
+  },[changeNumber]);
+  
   return (
     <>
     <Counter />
