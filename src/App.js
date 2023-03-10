@@ -2,6 +2,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import Counter from './components/Counter';
+import Unmount from './components/Unmount';
 //import Header from './components/forheader';
 //import User from './components/User';
 /*
@@ -29,6 +30,7 @@ function App() {
   const [changeNumber, setChangeNumber]= useState(23);
   const [changeArray, setChangeArray]=useState(["Betüş", "Peri"]);
   const [changeObject, setChangeObject]=useState({title:"kayseri", zip:38038});
+  const [isVisible, setIsVisible]=useState(true);
 
   useEffect(()=> {
     console.log("useeffect kullanıldı")
@@ -36,6 +38,10 @@ function App() {
   
   return (
     <>
+    {isVisible && <Unmount /> }
+    <button onClick={() => setIsVisible(!isVisible)}> Toggle </button>
+
+    <hr />
     <Counter />
     <h2> {changeString} </h2>
     <button onClick={() => (setChangeString("good bye")) }> Change string
@@ -51,7 +57,6 @@ function App() {
     <br></br>
     <h3> {changeObject.title} {changeObject.zip} </h3>
     <button onClick={()=>(setChangeObject({...changeObject, title:"konya", zip:42042}))}> change object</button>
-
     <hr />
     {
     /*
